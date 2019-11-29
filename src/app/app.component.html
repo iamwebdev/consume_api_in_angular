@@ -1,0 +1,17 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <a class="navbar-brand" routerLink='/'>Todo App</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+</nav>
+<div class="container">
+    <div class="card mt-4">
+        <img src="../assets/todo.png" class="card-img-top" alt="todo">
+        <div class="card-body">
+          <h5 class="card-title">Description</h5>
+          <p class="card-text">This application in built in Angular 8 for consuming rest api.</p>
+          <a routerLink="/todo" class="btn btn-info">Show todo list below</a>
+        </div>
+    </div>
+    <router-outlet></router-outlet>
+</div>

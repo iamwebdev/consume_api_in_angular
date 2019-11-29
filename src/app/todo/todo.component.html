@@ -1,0 +1,19 @@
+<h1 class="mt-3" style="text-align: center;color: #08b0d8;">Todo List</h1>
+<input class="form-control col-md-4" type="text" placeholder="Type to search..." [(ngModel)]="term">
+<table class="table mt-5">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">Todo</th>
+            <th scope="col">Status</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of todoList |filter:term">
+            <td>{{ item.title }}</td>
+            <td *ngIf="item.completed == true;else notcompleted"><span class="badge badge-success">Completed</span></td>
+            <ng-template #notcompleted>
+                <td><span class="badge badge-danger">Not Completed</span></td>
+            </ng-template>
+        </tr>
+    </tbody>
+</table>
